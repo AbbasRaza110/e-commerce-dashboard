@@ -1,0 +1,111 @@
+<div
+  class="col-7 rounded-4 rounded-start-0"
+  style="background-color: rgb(247, 247, 247)"
+>
+  <div class="p-5 d-flex flex-column gap-3">
+    <div>
+      <h1 class="fw-semibold">Welcome back</h1>
+      <p class="m-0 fs-small fw-medium" style="color: #5a413a">
+        Please enter your credentials to access your retail analytics dashboard.
+      </p>
+    </div>
+    <div class="d-flex gap-2">
+      <div
+        class="p-2 input-bg rounded w-100 d-flex gap-2 justify-center cursor-pointer"
+      >
+        <img src="google.svg" alt="" width="20" height="20" />
+        <p class="fs-small m-0">Google Workspace</p>
+      </div>
+      <div
+        class="p-2 input-bg rounded w-100 d-flex gap-2 justify-center cursor-pointer"
+      >
+        <img src="microsoft.svg" alt="" width="25" height="25" />
+        <p class="fs-small m-0">Microsoft 365</p>
+      </div>
+    </div>
+    <div class="justify-center gap-2">
+      <hr class="flex-fill" />
+      <p class="m-0 fs-small fw-medium" style="color: #5a413a">
+        OR Continue With Email
+      </p>
+      <hr class="flex-fill" />
+    </div>
+
+    <form
+      class="container"
+      (ngSubmit)="handleFormSubmit($event)"
+      [formGroup]="loginFormGroup()"
+    >
+      <!-- Email Input Group -->
+      <div class="mb-3">
+        <label for="userEmail" class="form-label">Email address</label>
+        <input
+          formControlName="email"
+          type="email"
+          class="form-control"
+          id="userEmail"
+          placeholder="name@example.com"
+          aria-describedby="emailHelp"
+        />
+      </div>
+
+      <!-- Password Input Group -->
+      <div class="mb-3">
+        <div class="d-flex justify-content-between">
+          <label for="userPassword" class="form-label">Password</label>
+          <p class="m-0 primary-color fw-medium cursor-pointer">
+            Forgot Password?
+          </p>
+        </div>
+        <div class="mb-3 position-relative">
+          <div class="position-relative d-flex align-items-center">
+            <input
+              formControlName="password"
+              [type]="isPasswordVisible ? 'text' : 'password'"
+              class="form-control pe-5"
+              id="userPassword"
+              placeholder="Enter your password"
+            />
+            <button
+              (click)="togglePasswordVisibilty()"
+              class="btn border-0 position-absolute end-0 me-2 p-1 d-flex align-items-center"
+              type="button"
+              style="z-index: 5"
+            >
+              <span class="material-symbols-outlined text-muted">
+                {{ isPasswordVisible ? "visibility" : "visibility_off" }}
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Optional Remember Me Checkbox -->
+      <div class="mb-3 form-check">
+        <input
+          formControlName="isKeepSignedIn"
+          type="checkbox"
+          class="form-check-input"
+          id="rememberMe"
+        />
+        <p>Keep me signed in on this workstation</p>
+      </div>
+
+      <!-- Submit Button -->
+      <button
+        type="submit"
+        class="rounded border-0 primary-background-color white-text w-100 p-3 fw-medium"
+      >
+        Sign In to Dashboard
+      </button>
+    </form>
+
+    <hr />
+    <span class="align-self-center"
+      >Don't have an enterprise account?
+      <span class="primary-color fw-medium cursor-pointer"
+        >Request Retail Access ></span
+      ></span
+    >
+  </div>
+</div>

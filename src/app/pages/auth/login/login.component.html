@@ -1,0 +1,13 @@
+<div
+  class="container-fluid vh-100 w-100 d-flex align-items-center justify-content-center mb-5"
+>
+  <div class="w-75 h-75 row">
+    <auth-left-layout> </auth-left-layout>
+
+    <auth-right-layout
+      (loginSubmit)="onLogin($event)"
+      [loginFormGroup]="loginForm"
+    >
+    </auth-right-layout>
+  </div>
+</div>

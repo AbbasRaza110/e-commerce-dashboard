@@ -1,1 +1,140 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* padding-bottom: 100px; */
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(239, 238, 238);
+
+  /* Allows scrolling but prevents horizontal clipping/shifting */
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  /* Hide scrollbar for Internet Explorer and legacy Edge */
+  -ms-overflow-style: none;
+}
+
+/* Hide scrollbar for Chrome, Safari, Opera, and modern Edge */
+body::-webkit-scrollbar {
+  display: none;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.primary-background-color {
+  background-color: #fa5c35;
+}
+.secondary-background-color {
+  background-color: #34407b;
+}
+.tertiary-background-color {
+  background-color: #00c2a0;
+}
+.neutral-background-color {
+  background-color: #2c386e;
+}
+
+.primary-color {
+  color: #fa5c35;
+}
+.secondary-color {
+  color: #34407b;
+}
+.tertiary-color {
+  color: #00c2a0;
+}
+.neutral-color {
+  color: #2c386e;
+}
+.menu-color {
+  color: #cfd7ff;
+}
+.menu-active-color {
+  background-color: #4f5a97;
+}
+.white-text {
+  color: #fff;
+}
+.gray-text {
+  color: #e9e5e5;
+}
+
+.material-symbols-outlined {
+  font-size: 24px;
+}
+
+.fs-xsmall {
+  font-size: x-small;
+}
+.fs-smaller {
+  font-size: smaller;
+}
+.fs-small {
+  font-size: small;
+}
+.fs-medium {
+  font-size: medium;
+}
+.fs-large {
+  font-size: large;
+}
+.fs-larger {
+  font-size: larger;
+}
+
+.justify-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-icon-bg {
+  background-color: #f68a6f;
+}
+
+.user-background-color {
+  background-color: #5060a7;
+}
+.icon-background-color {
+  background-color: #6c76a7;
+}
+
+.img-border-color {
+  --bs-border-color: #ff5f38;
+  --bs-border-width: 2px;
+}
+
+/* Smoothly transitions the transform property over 0.2 seconds */
+.hover-straighten {
+  transform: rotate(-1deg);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Straightens the div back to normal when hovered */
+.hover-straighten:hover {
+  transform: rotate(0deg);
+}
+
+.input-bg {
+  background-color: #e6e5f5;
+}
+
+/* 1. Change Checkbox Background Color When Checked */
+.form-check-input:checked {
+  background-color: #fa5c35 !important; /* Replace with your custom brand color */
+  border-color: #fa5c35 !important;
+}
+
+/* 2. Change Input & Checkbox Border Color and Glow on Focus */
+.form-control:focus,
+.form-check-input:focus {
+  border-color: #fa5c35 !important; /* Replace with your custom focus border color */
+  box-shadow: none;
+}
+.form-control {
+  padding: 12px;
+}

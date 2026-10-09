@@ -1,0 +1,18 @@
+<div class="w-full vh-100 secondary-background-color p-4">
+  <img src=" logo.png" alt="LOGO" width="200" style="color: white" />
+  <div class="py-4">
+    @for (item of menuItems; track item.title) {
+      @if (item.sectionTitle) {
+        <h6 class="menu-color fs-medium mt-4 px-2">{{ item.sectionTitle }}</h6>
+      }
+      <div
+        routerLink="/{{ item.routerLink }}"
+        routerLinkActive="primary-background-color text-white rounded-4 p-2"
+        class="d-flex align-items-center gap-2 cursor-pointer w-100 transition menu-color mb-2 px-2"
+      >
+        <span class="material-symbols-outlined">{{ item.icon }}</span>
+        <h6 class="m-0 fs-medium">{{ item.title }}</h6>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="d-flex w-100 vh-100 overflow-hidden">
+  <!-- Left Column Container: Locked to exactly 25% minimum width boundary -->
+  <div class="flex-shrink-0" style="min-width: 25%">
+    <app-sidebar></app-sidebar>
+  </div>
+
+  <!-- Right Viewport Stage Container -->
+  <div class="flex-grow-1 h-100 overflow-y-auto">
+    <app-topbar></app-topbar>
+    <router-outlet></router-outlet>
+  </div>
+</div>
