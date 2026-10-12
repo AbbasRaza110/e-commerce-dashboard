@@ -18,21 +18,35 @@
   </div>
 
   <div class="justify-center gap-2">
+    <!-- DARK_MODE -->
     <div
       class="d-flex align-items-center justify-center p-2 rounded-circle bg-white cursor-pointer"
     >
       <span class="material-symbols-outlined self-center"> dark_mode </span>
     </div>
+
+    <!-- NOTIFICATIONS -->
     <div
       class="d-flex align-items-center justify-center p-2 rounded-circle bg-white cursor-pointer"
     >
       <span class="material-symbols-outlined self-center"> notifications </span>
     </div>
+
+    <!-- LOGOUT  -->
     <div
       class="d-flex align-items-center justify-center p-2 gap-2 rounded-5 bg-white cursor-pointer"
+      (click)="onLogout()"
     >
       <span class="material-symbols-outlined self-center"> logout </span>
       <p class="m-0">logout</p>
+    </div>
+
+    <!-- PROFILE ICON -->
+    <div
+      class="primary-background-color white-text d-flex align-items-center justify-center rounded-circle cursor-pointer"
+      style="width: 32px; height: 32px"
+    >
+      A
     </div>
   </div>
 </div>

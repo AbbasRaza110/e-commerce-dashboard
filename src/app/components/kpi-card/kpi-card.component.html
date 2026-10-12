@@ -1,0 +1,27 @@
+<div
+  class="p-3 bg-white d-flex flex-column align-items-center justify-content-center text-center rounded-4 shadow-sm h-100"
+>
+  <div
+    class="{{
+      kpiData().iconBg
+    }} d-flex align-items-center justify-content-center rounded-circle mb-3"
+    style="width: 40px; height: 40px"
+  >
+    <span class="material-symbols-outlined white-text fs-5">
+      {{ kpiData().icon }}
+    </span>
+  </div>
+
+  <!-- KPI Metadata Labels -->
+  <p class="m-0 fw-semibold fs-small text-uppercase tracking-wider">
+    {{ kpiData().title }}
+  </p>
+
+  <p class="m-0 fs-xsmall secondary-text fw-medium">
+    {{ kpiData().subtitle }}
+  </p>
+
+  <h2 class="m-0 fw-semibold" [class.primary-color]="index() === 0">
+    {{ kpiData().value }}
+  </h2>
+</div>

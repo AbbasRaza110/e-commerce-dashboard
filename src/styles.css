@@ -25,6 +25,9 @@ body::-webkit-scrollbar {
 .cursor-pointer {
   cursor: pointer;
 }
+.secondary-text {
+  color: #5a413a;
+}
 .primary-background-color {
   background-color: #fa5c35;
 }
@@ -83,7 +86,10 @@ body::-webkit-scrollbar {
   font-size: large;
 }
 .fs-larger {
-  font-size: larger;
+  font-size: large;
+}
+.fs-xlarger {
+  font-size: x-large;
 }
 
 .justify-center {
